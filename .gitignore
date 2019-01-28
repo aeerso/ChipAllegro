@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+#macOS specifics
+.DS_Store
