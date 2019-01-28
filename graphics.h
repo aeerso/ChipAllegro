@@ -3,15 +3,20 @@
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <iostream>
+#include "chip8.h"
 using namespace std;
 
 
 class Graphics {
 
     private:
+        Chip8* chip8;
         ALLEGRO_DISPLAY* display_pnt;
-        //Dimension are hard-coded as 64 * 32 = 2048
-        uint8_t* pixel_matrix;
+        ALLEGRO_EVENT_QUEUE *event_queue;
+        ALLEGRO_TIMER *timer;
+        bool redraw = true;
+
+        float fps;
 
         float cell_width;
         float cell_height;
@@ -19,8 +24,8 @@ class Graphics {
         unsigned screen_height;
 
     public:
-        Graphics(uint8_t *pixels);
-        ALLEGRO_DISPLAY* init_allegro();
+        Graphics(Chip8* system);
+        void init_allegro();
         void draw();
 
 };

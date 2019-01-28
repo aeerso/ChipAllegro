@@ -126,7 +126,7 @@ bool Chip8::load(const char *file_path){
 void Chip8::emulate_cycle() {
     //Load two bytes opcode
     opcode = memory[pc] << 8 | memory[pc + 1];
-    cout << "[ChipAllegro] Loading opcode: " << opcode << "\n";
+    //cout << "\r" << "[ChipAllegro] Loading opcode: " << opcode;
 
     switch(opcode & 0xF000){
 
@@ -491,16 +491,7 @@ void Chip8::emulate_cycle() {
 
 }
 
-uint8_t* Chip8::getPixelMatrix(){
-    for (int i = 0; i < 2048; ++i) {
-        uint8_t pixel = gfx[i];
-        pixels[i] = (0x00FFFFFF * pixel) | 0xFF000000;
-    }
+uint8_t* Chip8::getGFX(){
     uint8_t *pnt = gfx;
     return pnt;
-}
-
-
-void Chip8::show_display(){
-
 }

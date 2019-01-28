@@ -34,7 +34,7 @@ class Chip8 {
         void show_display();
         bool getDrawFlag();
         void resetDrawFlag();
-        uint8_t* getPixelMatrix();
+        uint8_t* getGFX();
         
 
 };
