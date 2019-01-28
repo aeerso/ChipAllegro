@@ -114,5 +114,117 @@ void Graphics::draw()
         {
             return;
         }
+
+        if(ev.type == ALLEGRO_EVENT_KEY_DOWN) 
+        {
+            switch(ev.keyboard.keycode) 
+            {
+                case ALLEGRO_KEY_X:
+                    chip8->getKey()[0] = 1;
+                    break;
+                case ALLEGRO_KEY_1:
+                    chip8->getKey()[1] = 1;
+                    break;
+                case ALLEGRO_KEY_2:
+                    chip8->getKey()[2] = 1;
+                    break;
+                case ALLEGRO_KEY_3:
+                    chip8->getKey()[3] = 1;
+                    break;
+                case ALLEGRO_KEY_Q:
+                    chip8->getKey()[4] = 1;
+                    break;
+                case ALLEGRO_KEY_W:
+                    chip8->getKey()[5] = 1;
+                    break;
+                case ALLEGRO_KEY_E:
+                    chip8->getKey()[6] = 1;
+                    break;
+                case ALLEGRO_KEY_A:
+                    chip8->getKey()[7] = 1;
+                    break;
+                case ALLEGRO_KEY_S:
+                    chip8->getKey()[8] = 1;
+                    break;
+                case ALLEGRO_KEY_D:
+                    chip8->getKey()[9] = 1;
+                    break;
+                case ALLEGRO_KEY_Z:
+                    chip8->getKey()[10] = 1;
+                    break;
+                case ALLEGRO_KEY_C:
+                    chip8->getKey()[11] = 1;
+                    break;   
+                case ALLEGRO_KEY_4:
+                    chip8->getKey()[12] = 1;
+                    break;    
+                case ALLEGRO_KEY_R:
+                    chip8->getKey()[13] = 1;
+                    break;    
+                case ALLEGRO_KEY_F:
+                    chip8->getKey()[14] = 1;
+                    break;    
+                case ALLEGRO_KEY_V:
+                    chip8->getKey()[15] = 1;
+                    break;                 
+            }
+        }
+
+        if(ev.type == ALLEGRO_EVENT_KEY_UP) 
+        {
+            switch(ev.keyboard.keycode) 
+            {
+                case ALLEGRO_KEY_X:
+                    chip8->getKey()[0] = 0;
+                    break;
+                case ALLEGRO_KEY_1:
+                    chip8->getKey()[1] = 0;
+                    break;
+                case ALLEGRO_KEY_2:
+                    chip8->getKey()[2] = 0;
+                    break;
+                case ALLEGRO_KEY_3:
+                    chip8->getKey()[3] = 0;
+                    break;
+                case ALLEGRO_KEY_Q:
+                    chip8->getKey()[4] = 0;
+                    break;
+                case ALLEGRO_KEY_W:
+                    chip8->getKey()[5] = 0;
+                    break;
+                case ALLEGRO_KEY_E:
+                    chip8->getKey()[6] = 0;
+                    break;
+                case ALLEGRO_KEY_A:
+                    chip8->getKey()[7] = 0;
+                    break;
+                case ALLEGRO_KEY_S:
+                    chip8->getKey()[8] = 0;
+                    break;
+                case ALLEGRO_KEY_D:
+                    chip8->getKey()[9] = 0;
+                    break;
+                case ALLEGRO_KEY_Z:
+                    chip8->getKey()[10] = 0;
+                    break;
+                case ALLEGRO_KEY_C:
+                    chip8->getKey()[11] = 0;
+                    break;   
+                case ALLEGRO_KEY_4:
+                    chip8->getKey()[12] = 0;
+                    break;    
+                case ALLEGRO_KEY_R:
+                    chip8->getKey()[13] = 0;
+                    break;    
+                case ALLEGRO_KEY_F:
+                    chip8->getKey()[14] = 0;
+                    break;    
+                case ALLEGRO_KEY_V:
+                    chip8->getKey()[15] = 0;
+                    break;                 
+            }
+        }
+
+
     }
 }

@@ -518,3 +518,9 @@ uint8_t *Chip8::getGFX()
     uint8_t *pnt = gfx;
     return pnt;
 }
+
+uint8_t *Chip8::getKey()
+{
+    uint8_t *pnt = key;
+    return pnt;
+}
