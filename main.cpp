@@ -6,10 +6,11 @@
 
 using namespace std;
 
+int main(int argc, char **argv)
+{
 
-int main(int argc, char **argv){
-
-    if(argc == 1){
+    if (argc == 1)
+    {
         cerr << "No rom supplied! Quitting.." << endl;
         return -1;
     }
@@ -17,6 +18,7 @@ int main(int argc, char **argv){
     Chip8 system;
     Graphics graphics(&system);
     system.load(argv[1]);
+    
     graphics.draw();
 
     return 0;
