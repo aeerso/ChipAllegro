@@ -144,8 +144,8 @@ void Chip8::emulate_cycle()
 {
     //Load two bytes opcode
     opcode = memory[pc] << 8 | memory[pc + 1];
-    cout << "\r"
-         << "[ChipAllegro] Loading opcode: " << opcode;
+    //cout << "\r"
+    //     << "[ChipAllegro] Loading opcode: " << opcode;
 
     switch (opcode & 0xF000)
     {
