@@ -8,7 +8,8 @@ A Chip8 emulator using allegro5
 
 ##### How to use:
 
-It is mainly written in C++, so first of all compile it using: <code>g++ *.cpp -lallegro -lallegro_main -lallegro_primitives -o ChipAllegro -std=c++11</code>
+It is mainly written in C++, so first of all compile it using:<br>
+<code>g++ *.cpp -lallegro -lallegro_main -lallegro_primitives -o ChipAllegro -std=c++11</code>
 
 And run it using: <code>./ChipAllegro <rom file></code>
 
