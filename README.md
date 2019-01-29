@@ -17,7 +17,7 @@ And run it using: <code>./ChipAllegro <rom file></code>
 
 There is *a lot* to do:
 
-- Input support
+- Input support (Initial support added on the [v.0.2-alpha](https://github.com/deople/ChipAllegro/tree/v0.2-alpha))
 
 - Sound support
 
