@@ -27,5 +27,6 @@ class Graphics
     Graphics(Chip8 *system);
     void init_allegro();
     void draw();
+    ALLEGRO_DISPLAY* getDisplay();
 };
 #endif

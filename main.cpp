@@ -18,6 +18,10 @@ int main(int argc, char **argv)
     Chip8 system;
     Graphics graphics(&system);
     system.load(argv[1]);
+    //Just for fancy
+    string title = "ChipAllegro - " + string(argv[1]);
+
+    al_set_window_title(graphics.getDisplay(), title.c_str());
     
     graphics.draw();
 

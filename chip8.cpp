@@ -87,9 +87,9 @@ void Chip8::init()
 
 bool Chip8::load(const char *file_path)
 {
+    rom_name = file_path;
     //if a game is already loaded, redo the init
     init();
-
     cout << "[ChipAllegro] Loading ROM: " << file_path << "\n";
 
     FILE *rom = fopen(file_path, "rb");
@@ -523,4 +523,10 @@ uint8_t *Chip8::getKey()
 {
     uint8_t *pnt = key;
     return pnt;
+}
+
+void Chip8::reload()
+{
+    cout << "[ChipAllegro] Reloading " << rom_name << ".." << endl;
+    load(rom_name.c_str());
 }

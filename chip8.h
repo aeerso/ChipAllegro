@@ -1,6 +1,8 @@
 #ifndef CHIP_8_H
 #define CHIP_8_H
 #include <stdint.h>
+#include <iostream>
+using namespace std;
 
 class Chip8
 {
@@ -24,6 +26,8 @@ class Chip8
 
     bool drawFlag; //If something was draw
 
+    string rom_name;
+
   public:
     Chip8();
     ~Chip8();
@@ -34,6 +38,7 @@ class Chip8
     void show_display();
     bool getDrawFlag();
     void resetDrawFlag();
+    void reload();
     uint8_t *getGFX();
     uint8_t *getKey();
 };
